@@ -167,3 +167,12 @@ envoy:
 
 extraConfig:
   {{ cilium_config_extra_vars | to_yaml | indent(2) }}
+
+{% if cilium_enable_vtep %}
+vtep:
+  enabled: True
+  endpoint: "{{ cilium_enable_vtep_endpoint }}"
+  cidr: "{{ cilium_enable_vtep_cidr }}"
+  mask: "{{ cilium_enable_vtep_mask }}"
+  mac: "{{ cilium_enable_vtep_mac }}"
+{% endif %}
