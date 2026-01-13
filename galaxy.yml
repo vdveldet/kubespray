@@ -1,5 +1,5 @@
 ---
-namespace: kubernetes_sigs
+namespace: vdveldet
 description: Deploy a production ready Kubernetes cluster
 name: kubespray
 version: 2.30.0
